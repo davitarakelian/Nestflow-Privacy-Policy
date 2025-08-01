@@ -1,0 +1,95 @@
+{
+  "expo": {
+    "name": "newapp",
+    "slug": "newapp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "newapp",
+    "icon": "./assets/Nestflow.png",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "android": {
+      "versionCode": 1,
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyANDk5ZCEkgttv02JZHddDNgRfzmSpVrxI"
+        }
+      },
+      "package": "com.anonymous.startapp",
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ],
+      "runtimeVersion": "1.0.0"
+    },
+    "ios": {
+      "config": {
+        "googleMapsApiKey": "AIzaSyANDk5ZCEkgttv02JZHddDNgRfzmSpVrxI"
+      },
+      "runtimeVersion": {
+        "policy": "appVersion"
+      },
+      "bundleIdentifier": "com.nestflow.app",
+      "buildNumber": "6",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSContactsUsageDescription": "We access your contacts to help you autofill details when inviting or paying people through the app.",
+        "NSPhotoLibraryUsageDescription": "We need access to your photo library so you can select images and videos to share or upload.",
+        "NSCameraUsageDescription": "We use your camera for taking pictures and scanning documents within the app.",
+        "NSMicrophoneUsageDescription": "Microphone access is required when recording audio or during video capture.",
+        "NSLocationWhenInUseUsageDescription": "We use your location to show relevant nearby services and improve navigation within the app."
+      }
+    },
+    "plugins": [
+      "expo-web-browser",
+      "expo-image-picker",
+      "expo-location",
+      "expo-document-picker",
+      [
+        "@stripe/stripe-react-native",
+        {
+          "merchantIdentifier": "merchant.com.nestflow.app",
+          "enableGooglePay": false
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static",
+            "useModularHeaders": true,
+            "extraPods": [
+              {
+                "name": "GoogleUtilities",
+                "modular_headers": true
+              }
+            ]
+          }
+        }
+      ]
+    ],
+    "extra": {
+      "GOOGLE_PLACES_API_KEY": "AIzaSyANDk5ZCEkgttv02JZHddDNgRfzmSpVrxI",
+      "googlePlacesApiKey": "AIzaSyANDk5ZCEkgttv02JZHddDNgRfzmSpVrxI",
+      "googleOAuth": {
+        "expoClientId": "425755178960-5h8me2rc833ut1i8son4074mg150ubhf.apps.googleusercontent.com",
+        "iosClientId": "425755178960-5h8me2rc833ut1i8son4074mg150ubhf.apps.googleusercontent.com",
+        "androidClientId": "425755178960-5h8me2rc833ut1i8son4074mg150ubhf.apps.googleusercontent.com",
+        "webClientId": "425755178960-5h8me2rc833ut1i8son4074mg150ubhf.apps.googleusercontent.com"
+      },
+      "eas": {
+        "projectId": "79b36f5c-3418-48dc-ae23-10d21347c645"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/79b36f5c-3418-48dc-ae23-10d21347c645"
+    }
+  }
+}
